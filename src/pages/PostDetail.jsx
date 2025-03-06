@@ -1,20 +1,28 @@
-import React from "react";
 import { useParams } from "react-router-dom";
-import { blogPosts } from "../data";
+import { Container } from "react-bootstrap";
+import posts from "../data.jsx";
+import "./PostDetail.css";
 
-//显示具体博客的页面
 const PostDetail = () => {
   const { id } = useParams();
-  const post = blogPosts.find((p) => p.id === parseInt(id));
+  const post = posts.find((p) => p.id === parseInt(id));
 
   if (!post) {
-    return <div>文章不存在</div>;
+    return (
+      <Container className="my-4">
+        <h1 className="text-center">文章不存在</h1>
+      </Container>
+    );
   }
+
   return (
-    <>
-      <h1>{post.title}</h1>
-      <p>{post.content}</p>
-    </>
+    <Container className="my-4">
+      <div className="post-detail">
+        <h1>{post.title}</h1>
+        <p>{post.content}</p>
+      </div>
+    </Container>
   );
 };
+
 export default PostDetail;

@@ -1,0 +1,4 @@
+/* src/components/Footer.css */
+.footer {
+    margin-top: auto; /* 确保页脚在 Flex 布局中被推到底部 */
+  }
