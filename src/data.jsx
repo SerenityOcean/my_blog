@@ -18,6 +18,13 @@ const posts = [
     description: "'开学了吗？'",
     content: "我是海绵宝宝，我不同意开学....",
   },
+  {
+    id: 4,
+    title: "吃饭没？",
+    description: "已经过了饭点了，可是我还没吃饭",
+    content:
+      "小朋友你回家吃饭吗....../n小朋友，你今天回家吃饭吗....../n biu.......",
+  },
 ];
 
 export default posts;
